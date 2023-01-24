@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block contenido %}
+<div class="container">
+  
+
+  <div class="card text-white bg-secondary mb-8" style="max-width: 50rem; margin: auto; margin-top: 30px; ">
+    <h1>Registro</h1>
+    <div class="card-header">Registrate para poder jugar</div>
+    <div class="card-body">
+      <form method="post">
+        {% csrf_token %} {{ form.as_p }}
+      
+        <button type="submit">Enviar</button>
+      </form>
+     </div>
+  </div>
+</div>
+{% endblock %}
